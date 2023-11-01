@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto&family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.center {
+    padding-left: calc(50% - 620px);
+    padding-right: calc(50% - 620px);
+}
+
+.top {
+    background-image: url(img/top.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1024px;
+    padding-top: 217px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 788px;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__text {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+        padding-top: 16px;
+        width: 481px;
+
+        &-bold {
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        width: 234px;
+        height: 48px;
+        border-radius: 30px;
+        background: #9C0332;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 44px;
+    }
+}
+
+.games-box {
+    background: #000915;
+    display: flex;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    gap: 32px;
+    padding-top: 128px;
+    padding-bottom: 128px;
+
+    &__item {
+        width: 379px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 18px;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        align-items: flex-end;
+        padding-left: 32px;
+        padding-bottom: 32px;
+        box-sizing: border-box;
+
+        &_1 {
+            background-image: url(img/first-game.jpg);
+        }
+
+        &_2 {
+            background-image: url(img/second-game.jpg);
+        }
+
+        &_3 {
+            background-image: url(img/third-game.jpg);
+        }
+    }
+}
+
+@import 'mobile';
