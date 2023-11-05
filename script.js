@@ -1,69 +1,119 @@
-// 1 Задание 
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
-
-// 2 Задание 
-let release = 2007;
-alert(release);
-
-// 3 Задание 
-let inventor = 'Brendan Eich';
-alert(inventor);
-
-// 4 Задание 
-let one = 10;
-let two = 2;
-
-alert(`Сумма: ${one + two}, Разность: ${one - two}, Произведение: ${one * two}, Частное:${10 % 2} `);
-
-// 5 Задание
-let degreeOne = 2;
-let degreeTwo = 5;
-
-let result = degreeOne ** degreeTwo;
-alert(result);
-
-// 6 Задание 
-let b = 9;
-let c = 2;
-
-alert(b % c);
-
-// 7 Задание 
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-++num;
---num;
-alert(num);
-
-// 8 Задание 
-let age = prompt("Сколько вам лет?");
-alert(parseInt(age));
-
-// 9 Задание
-let user = {
-    name: 'Azim',
-    age: 21,
-    isAdmin: true
-}
-
-user.cityOfResidence = 'Grozny';
-user.age = 25;
-
-delete user.cityOfResidence;
-
-let info = prompt("Какую информацию хотите узнать о пользователе?");
-
-alert(user[info]);
-
-// 10 Задание
-let data = prompt('Как вас зовут?');
-
-alert(`Привет, ${data}!`);
+// if (a > b) {
+//     console.log('Первое число больше');
+// } else if (a === b) {
+//     console.log('Числа равны');
+// } else {
+//     console.log('Второе число больше');
+// }
 
 
+// let answer = String(prompt('Зимой и летом одним цветом'));
+
+// answer = answer.toLocaleLowerCase();
+
+// if (answer === 'елка' || answer === 'ёлка' || answer === 'ель') {
+//     console.log('угадал!')
+// } else {
+//     console.log('не угадал')
+// }
+
+// let time = String(prompt('Который час?'));
+
+
+// if (time >= 40 && time <= 60) {
+//     console.log('Можешь идти');
+// } else {
+//     console.log('Неудачное время!')
+// }
+
+// (time >= 40 && time <= 60) ? console.log('Можешь идти') : console.log('Неудачное время!');
+
+// let day = String(prompt('Введите день недели'));
+
+// switch (day) {
+//     case 'понедельник':
+//         console.log('Первый день недели');
+//         break;
+//     case 'вторник':
+//         console.log('Второй день недели');
+//         break;
+//     case 'среда':
+//         console.log('Третий день недели');
+//         break;
+//     case 'четверг':
+//         console.log('Четвертый день недели');
+//         break;
+//     default:
+//         console.log('Вы ввели неправильное значение!');
+//         break;
+// }
+
+// Задание 1
+
+// let password = 'world';
+// let request = prompt('Введите пароль');
+
+// // if (password === request) {
+// //     alert('Пароль введен верно');
+// // } else {
+// //     alert('Пароль введен неверно');
+// // }
+
+// (password === request) ? alert('Пароль введен верно') : alert('Пароль введен неверно');
+
+// // Задание 2 
+
+// let c = 11;
+
+// if (c > 0 && c < 10) {
+//     console.log('Верно');
+// } else {
+//     console.log('Неверно');
+// }
+
+// // Задание 3 
+
+// let d = 5;
+// let e = 3;
+
+// if (d > 100 || e > 100) {
+//     console.log('Верно');
+// } else {
+//     console.log('Неверно');
+// }
+
+// // Задание 4 
+
+// let a = '2';
+// let b = '3';
+// // Код выше изменять менять нельзя, чтобы решить задачу исправьте код ниже: 
+// alert(parseInt(a) + parseInt(b));
+
+// // Задание 5 
+
+// let monthNumber = 13;
+
+// switch (monthNumber) {
+//     case 1:
+//     case 2:
+//     case 12:
+//         console.log('Зима');
+//         break;
+//     case 3:
+//     case 4:
+//     case 5:
+//         console.log('Весна');
+//         break;
+//     case 6:
+//     case 7:
+//     case 8:
+//         console.log('Лето');
+//         break;
+//     case 9:
+//     case 10:
+//     case 11:
+//         console.log('Осень');
+//         break;
+//     default:
+//         сonsole.log('Такого месяца не существует')
+// }
