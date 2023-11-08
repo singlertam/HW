@@ -1,53 +1,3 @@
-// if (a > b) {
-//     console.log('Первое число больше');
-// } else if (a === b) {
-//     console.log('Числа равны');
-// } else {
-//     console.log('Второе число больше');
-// }
-
-
-// let answer = String(prompt('Зимой и летом одним цветом'));
-
-// answer = answer.toLocaleLowerCase();
-
-// if (answer === 'елка' || answer === 'ёлка' || answer === 'ель') {
-//     console.log('угадал!')
-// } else {
-//     console.log('не угадал')
-// }
-
-// let time = String(prompt('Который час?'));
-
-
-// if (time >= 40 && time <= 60) {
-//     console.log('Можешь идти');
-// } else {
-//     console.log('Неудачное время!')
-// }
-
-// (time >= 40 && time <= 60) ? console.log('Можешь идти') : console.log('Неудачное время!');
-
-// let day = String(prompt('Введите день недели'));
-
-// switch (day) {
-//     case 'понедельник':
-//         console.log('Первый день недели');
-//         break;
-//     case 'вторник':
-//         console.log('Второй день недели');
-//         break;
-//     case 'среда':
-//         console.log('Третий день недели');
-//         break;
-//     case 'четверг':
-//         console.log('Четвертый день недели');
-//         break;
-//     default:
-//         console.log('Вы ввели неправильное значение!');
-//         break;
-// }
-
 // Задание 1
 
 // let password = 'world';
@@ -116,4 +66,45 @@
 //         break;
 //     default:
 //         сonsole.log('Такого месяца не существует')
+// }
+
+// Задание 6
+
+// let evenOrNot = prompt('Пожалуйста, введите любое число');
+
+// let userNumber = parseFloat(evenOrNot);
+
+// if (!isNaN(userNumber)) {
+//     if (userNumber % 2 === 0) {
+//         alert("Число четное");
+//     } else {
+//         alert("Число нечетное");
+//     }
+// } else {
+//     alert("Вы ввели некорректное значение. Пожалуйста, введите число.");
+// }
+
+// Задание 7 
+
+// let clientOs = 0;
+
+// if (clientOs === 0) {
+//     console.log('Установите версию приложения для iOS по ссылке');
+// } else if (clientOs === 1) {
+//     console.log('Установите версию приложения для Android по ссылке');
+// } else {
+//     console.log('Неизвестная операционная система');
+// }
+
+// Задание 8 
+
+// let clientOs = 0;
+// let clientDeviceYear = 2015;
+
+// if (clientDeviceYear < 2015 && clientOs === 0) {
+//     console.log('Установите облегченную версию приложения для iOS по ссылке');
+// } else if (clientDeviceYear < 2015 && clientOs === 1) {
+//     console.log('Установите облегченную версию приложения для Android по ссылке');
+// } else {
+//     console.log('У вас актуальная операционная система');
 // }
