@@ -67,6 +67,11 @@ body {
         align-items: center;
         justify-content: center;
         margin-top: 44px;
+        cursor: pointer;
+
+        &:hover {
+            background: #EB443F;
+        }
     }
 }
 
@@ -97,19 +102,96 @@ body {
         padding-left: 32px;
         padding-bottom: 32px;
         box-sizing: border-box;
+        cursor: pointer;
+
+        &:hover {
+            border: 3px solid #44D2FF;
+        }
 
         &_1 {
             background-image: url(img/first-game.jpg);
+
+            &:hover {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(img/first-game.jpg), lightgray 50% / cover no-repeat;
+            }
         }
 
         &_2 {
             background-image: url(img/second-game.jpg);
+
+            &:hover {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(img/second-game.jpg), lightgray 50% / cover no-repeat;
+            }
         }
 
         &_3 {
             background-image: url(img/third-game.jpg);
+
+            &:hover {
+                background: linear-gradient(180deg, rgba(39, 1, 15, 0.00) 0%, #001944 100%), url(img/third-game.jpg), lightgray 50% / cover no-repeat;
+            }
         }
     }
+}
+
+.game-seasons {
+    background: #000915;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 233px;
+        padding-bottom: 233px;
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 48px;
+    }
+
+    &__text {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+        width: 584px;
+        margin-top: 32px;
+    }
+
+    &__button {
+        width: 234px;
+        height: 48px;
+        border-radius: 30px;
+        background: #9C0332;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+        cursor: pointer;
+
+        &:hover {
+            background: #EB443F;
+        }
+    }
+
+    &__image-mobile {
+        display: none;
+    }
+
 }
 
 @import 'mobile';
