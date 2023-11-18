@@ -15,7 +15,7 @@
             <p class="top__text">Вам предстоит пройти несколько увлекательных игр. Если готов нажимай <span
                     class="top__text-bold">поехали</span> и <span class="top__text-bold">приступай</span>.
             </p>
-            <div class="top__button">
+            <div class="top__button" onclick="launchGame();">
                 Поехали!
             </div>
         </div>
@@ -38,13 +38,28 @@
                 <p class="game-seasons__text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к
                     какому
                     времени года он относится</p>
-                <div class="game-seasons__button">
+                <div class="game-seasons__button" onclick="alert(seasonsGame('Укажите какой сейчас месяц по счету'));">
                     Играть!
                 </div>
             </div>
             <div class="game-seasons__content_right">
                 <img class="game-seasons__image" src="img/seasons.svg" alt="game-seasons">
                 <img class="game-seasons__image-mobile center" src="img/seasons-mobile.svg" alt="game-seasons">
+            </div>
+        </div>
+    </div>
+    <div class="words-game center">
+        <div class="words-game__content">
+            <div class="words-game__content_left">
+                <img class="words-game__image" src="img/words-part.svg" alt="game-words">
+                <img class="words-game__image-mobile center" src="img/words-game-mobile.svg" alt="game-seasons">
+            </div>
+            <div class="words-game__content_right center">
+                <p class="words-game__title">Запомни слова</p>
+                <p class="words-game__text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
+                <div class="words-game__button">
+                    Играть!
+                </div>
             </div>
         </div>
     </div>
