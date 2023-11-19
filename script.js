@@ -1,152 +1,167 @@
-// Задание 1 
+// Задание 1
 
-// const checkLeast = (value1, value2) => {
-//     let a = parseFloat(prompt(value1));
-//     let b = parseFloat(prompt(value2));
+const numbers = [1, 5, 4, 10, 0, 3];
 
-//     if (isNaN(a) || isNaN(b)) {
-//         console.log("Введите корректные числовые значения");
-//         return;
-//     }
+for (i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+    if (numbers[i] === 10) break;
+}
 
-//     if (a > b) {
-//         console.log(`Значение ${a} больше второго`);
-//     } else if (a < b) {
-//         console.log(`Значение ${b} больше первого`);
-//     } else {
-//         console.log("Значения равны");
-//     }
-// }
+// Задание 2
 
-// checkLeast("Введите два значения для их сравнения");
+const numbersTwo = [1, 5, 4, 10, 0, 3];
 
-// Задание 2 
+console.log(numbersTwo.indexOf(4));
 
-// const checkEven = (request) => {
-//     let userNumber = prompt(request);
+// Задание 3
 
-//     if (isNaN(userNumber)) {
-//         console.log("Введите корректное числовое значение");
-//         return;
-//     }
+const numbersThree = [1, 3, 5, 10, 20];
 
-//     if (userNumber % 2 === 0) {
-//         console.log(`Значение ${userNumber} является четным`);
-//     } else {
-//         console.log(`Значение ${userNumber} является нечетным`);
-//     }
-// }
+numbersThreeFiltered = numbersThree.join(' ');
 
-// checkEven("Введите значение, чтобы выяснить четное это значение или нечетное");
-
-// Задание 3.1
-
-// const makeSquare = (userAnswer) => {
-//     let square = prompt(userAnswer);
-
-//     console.log(square ** 2);
-// }
-
-// makeSquare('Введите значение, чтобы возвести в квадрат');
-
-// Задание 3.2
-
-// const returnSquare = (userAnswer) => {
-//     let square = prompt(userAnswer);
-
-//     return alert(square ** 2);
-// }
-
-// returnSquare('Введите значение, чтобы возвести в квадрат');
+console.log(numbersThreeFiltered);
 
 // Задание 4 
 
-// const checkAge = (userAnswer) => {
-//     let age = prompt(userAnswer);
+const bigArray = [];
+const quantity = 3;
 
-//     if (age < 0) {
-//         alert("Вы ввели неправильное значение");
-//     } else if (age > 0 && age < 12) {
-//         alert("Привет, друг!");
-//     } else {
-//         alert("Добро пожаловать!")
-//     }
-// }
+for (i = 0; i < quantity; i++) {
+    const innerArray = [];
+    for (el = 0; el < quantity; el++) {
+        innerArray.push(1);
+    }
+    bigArray.push(innerArray);
+}
 
-// checkAge("Укажите сколько вам лет?");
+console.log(bigArray);
 
 // Задание 5 
 
-// const check = (valueOne, valueTwo) => {
-//     let a = parseFloat(prompt(valueOne));
-//     let b = parseFloat(prompt(valueTwo));
-    
-//     if (isNaN(a) || isNaN(b)) {
-//         return "Одно или оба значения не являются числом";
-//     } else {
-//         return a * b;
-//     }
-// }
+const taskFive = [1, 1, 1];
+const addNumbers = 3;
 
-// console.log(check("Введите значения для проверки"));
+for (i = 0; i < addNumbers; i++) {
+    taskFive.push(2);
+}
+
+console.log(taskFive);
 
 // Задание 6 
 
-// const getCube = (request) => {
-//     let userNumber = prompt(request);
+const strangeArray = [9, 8, 7, 'a', 6, 5];
 
-//     if (isNaN(userNumber)) {
-//         return "Переданный параметр не является числом";
-//     } else {
-//         return userNumber ** 3;
-//     }
-// };
+newArray = strangeArray.sort().filter(item => typeof item === 'number');
 
-// console.log(getCube("Введите значение, чтобы возвести его в куб"));
+console.log(newArray);
 
 // Задание 7 
 
-// const getArea = function() {
-//     const p = 3.14;
-//     return `Площадь круга составляет ${p * (this.radius ** 2)}`;
+// const guess = [9, 8, 7, 6, 5];
+
+// const find = (userAnswer) => {
+//     let answer = prompt(userAnswer);
+//     let userNumber = parseInt(answer);
+
+//     if(guess.includes(userNumber)) {
+//         alert('Угадал');
+//     } else {
+//         alert('Не угадал')
+//     }
 // }
 
-// const getPerimetr = function() {
-//     const p = 3.14;
-//     return `Периметр круга составляет ${2 * p * this.radius}`;
-// }
-
-// const circle1 = {
-//     radius: 5,
-//     getArea: getArea,
-//     getPerimetr: getPerimetr
-// }
-
-// const circle2 = {
-//     radius: 7,
-//     getArea: getArea,
-//     getPerimetr: getPerimetr
-// }
-
-// console.log(circle1.getArea());
-// console.log(circle1.getPerimetr());
-// console.log(circle2.getArea());
-// console.log(circle2.getPerimetr());
+// find('Угадайте число');
 
 // Задание 8
 
-const seasonsGame = (userAnswer) => {
-    let answer = parseInt(prompt(userAnswer));
+let string = 'abcdef';
+let newString = string.split('').reverse().join('');
 
-    if (isNaN(answer) || answer < 1 || answer > 12) {
-        return "Вы ввели некорректное значение, попробуйте снова!";
-    } else if(answer === 12 || answer === 1 || answer === 2) {
-        return "Зима";
-    } else if(answer >= 3 && answer <= 5) {
-        return "Весна";
-    } else if(answer >= 6 && answer <= 8) {
-        return "Лето";
-    } else if(answer >= 9 && answer <= 11) {
-        return ("Осень");
-    } 
+console.log(newString);
+
+// Задание 9 
+
+const twoArray = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+const newTwoArray = [].concat(...twoArray);
+
+console.log(newTwoArray);
+
+
+// Задание 10
+
+const random = [7, 4, 9, 2, 5, 1, 8];
+
+for (i = 0; i < random.length - 1; i++) {
+    let count = random[i] + random[i + 1];
+    console.log(count);
+}
+
+
+// Задание 11
+
+const square = [6, 4, 7, 2, 9, 8];
+let newSquare = square.map(item => item ** 2);
+
+console.log(newSquare);
+
+// Задание 12
+
+const words = ['слово', '', 'слог', 'длинное предложение', 'буква'];
+
+const checkLength = () => {
+    let count = words.map(item => item.length);
+    console.log(count);
+} 
+
+checkLength();
+
+// Задание 13
+
+const negative = [2, -3, 9, 4, -7, 5, -4, -1];
+
+const getNegative = () => {
+    let processed = negative.filter(item => item < 0);
+    console.log(processed);
 };
+
+getNegative();
+
+// Задание 14
+
+const randomValue = [];
+
+for (i = 0; i < 10; i++) {
+    let add = Math.random() * 10;
+    add = Math.floor(add);
+    randomValue.push(add);
+}
+
+console.log(randomValue);
+
+let newRandomValue = randomValue.filter(item => item % 2 === 0);
+
+console.log(newRandomValue);
+
+// Задание 15 
+
+const average = [];
+
+for (i = 0; i < 6; i++) {
+    let add = Math.floor(Math.random() * 10);
+    average.push(add);
+}
+
+let processed = average.reduce(getAverage = (sum, initial) => {
+    return sum + initial;
+});
+
+console.log(average);
+console.log(processed);
+
+newAverage = processed / average.length;
+
+console.log(newAverage);
