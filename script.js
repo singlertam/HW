@@ -1,110 +1,167 @@
 // Задание 1
 
-// let password = 'world';
-// let request = prompt('Введите пароль');
+const numbers = [1, 5, 4, 10, 0, 3];
 
-// // if (password === request) {
-// //     alert('Пароль введен верно');
-// // } else {
-// //     alert('Пароль введен неверно');
-// // }
+for (i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+    if (numbers[i] === 10) break;
+}
 
-// (password === request) ? alert('Пароль введен верно') : alert('Пароль введен неверно');
+// Задание 2
 
-// // Задание 2 
+const numbersTwo = [1, 5, 4, 10, 0, 3];
 
-// let c = 11;
+console.log(numbersTwo.indexOf(4));
 
-// if (c > 0 && c < 10) {
-//     console.log('Верно');
-// } else {
-//     console.log('Неверно');
-// }
+// Задание 3
 
-// // Задание 3 
+const numbersThree = [1, 3, 5, 10, 20];
 
-// let d = 5;
-// let e = 3;
+numbersThreeFiltered = numbersThree.join(' ');
 
-// if (d > 100 || e > 100) {
-//     console.log('Верно');
-// } else {
-//     console.log('Неверно');
-// }
+console.log(numbersThreeFiltered);
 
-// // Задание 4 
+// Задание 4 
 
-// let a = '2';
-// let b = '3';
-// // Код выше изменять менять нельзя, чтобы решить задачу исправьте код ниже: 
-// alert(parseInt(a) + parseInt(b));
+const bigArray = [];
+const quantity = 3;
 
-// // Задание 5 
+for (i = 0; i < quantity; i++) {
+    const innerArray = [];
+    for (el = 0; el < quantity; el++) {
+        innerArray.push(1);
+    }
+    bigArray.push(innerArray);
+}
 
-// let monthNumber = 13;
+console.log(bigArray);
 
-// switch (monthNumber) {
-//     case 1:
-//     case 2:
-//     case 12:
-//         console.log('Зима');
-//         break;
-//     case 3:
-//     case 4:
-//     case 5:
-//         console.log('Весна');
-//         break;
-//     case 6:
-//     case 7:
-//     case 8:
-//         console.log('Лето');
-//         break;
-//     case 9:
-//     case 10:
-//     case 11:
-//         console.log('Осень');
-//         break;
-//     default:
-//         сonsole.log('Такого месяца не существует')
-// }
+// Задание 5 
 
-// Задание 6
+const taskFive = [1, 1, 1];
+const addNumbers = 3;
 
-// let evenOrNot = prompt('Пожалуйста, введите любое число');
+for (i = 0; i < addNumbers; i++) {
+    taskFive.push(2);
+}
 
-// let userNumber = parseFloat(evenOrNot);
+console.log(taskFive);
 
-// if (!isNaN(userNumber)) {
-//     if (userNumber % 2 === 0) {
-//         alert("Число четное");
-//     } else {
-//         alert("Число нечетное");
-//     }
-// } else {
-//     alert("Вы ввели некорректное значение. Пожалуйста, введите число.");
-// }
+// Задание 6 
+
+const strangeArray = [9, 8, 7, 'a', 6, 5];
+
+newArray = strangeArray.sort().filter(item => typeof item === 'number');
+
+console.log(newArray);
 
 // Задание 7 
 
-// let clientOs = 0;
+// const guess = [9, 8, 7, 6, 5];
 
-// if (clientOs === 0) {
-//     console.log('Установите версию приложения для iOS по ссылке');
-// } else if (clientOs === 1) {
-//     console.log('Установите версию приложения для Android по ссылке');
-// } else {
-//     console.log('Неизвестная операционная система');
+// const find = (userAnswer) => {
+//     let answer = prompt(userAnswer);
+//     let userNumber = parseInt(answer);
+
+//     if(guess.includes(userNumber)) {
+//         alert('Угадал');
+//     } else {
+//         alert('Не угадал')
+//     }
 // }
 
-// Задание 8 
+// find('Угадайте число');
 
-// let clientOs = 0;
-// let clientDeviceYear = 2015;
+// Задание 8
 
-// if (clientDeviceYear < 2015 && clientOs === 0) {
-//     console.log('Установите облегченную версию приложения для iOS по ссылке');
-// } else if (clientDeviceYear < 2015 && clientOs === 1) {
-//     console.log('Установите облегченную версию приложения для Android по ссылке');
-// } else {
-//     console.log('У вас актуальная операционная система');
-// }
+let string = 'abcdef';
+let newString = string.split('').reverse().join('');
+
+console.log(newString);
+
+// Задание 9 
+
+const twoArray = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+const newTwoArray = [].concat(...twoArray);
+
+console.log(newTwoArray);
+
+
+// Задание 10
+
+const random = [7, 4, 9, 2, 5, 1, 8];
+
+for (i = 0; i < random.length - 1; i++) {
+    let count = random[i] + random[i + 1];
+    console.log(count);
+}
+
+
+// Задание 11
+
+const square = [6, 4, 7, 2, 9, 8];
+let newSquare = square.map(item => item ** 2);
+
+console.log(newSquare);
+
+// Задание 12
+
+const words = ['слово', '', 'слог', 'длинное предложение', 'буква'];
+
+const checkLength = () => {
+    let count = words.map(item => item.length);
+    console.log(count);
+} 
+
+checkLength();
+
+// Задание 13
+
+const negative = [2, -3, 9, 4, -7, 5, -4, -1];
+
+const getNegative = () => {
+    let processed = negative.filter(item => item < 0);
+    console.log(processed);
+};
+
+getNegative();
+
+// Задание 14
+
+const randomValue = [];
+
+for (i = 0; i < 10; i++) {
+    let add = Math.random() * 10;
+    add = Math.floor(add);
+    randomValue.push(add);
+}
+
+console.log(randomValue);
+
+let newRandomValue = randomValue.filter(item => item % 2 === 0);
+
+console.log(newRandomValue);
+
+// Задание 15 
+
+const average = [];
+
+for (i = 0; i < 6; i++) {
+    let add = Math.floor(Math.random() * 10);
+    average.push(add);
+}
+
+let processed = average.reduce(getAverage = (sum, initial) => {
+    return sum + initial;
+});
+
+console.log(average);
+console.log(processed);
+
+newAverage = processed / average.length;
+
+console.log(newAverage);
