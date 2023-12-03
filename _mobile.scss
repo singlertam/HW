@@ -71,4 +71,40 @@
             }
         }
     }
+
+    .words-game {
+
+        &__content_left {
+            order: 2;
+        }
+
+        &__content_right {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            order: 1;
+        }
+
+        &__title {
+            width: 343px;
+            font-size: 32px;
+        }
+
+        &__text {
+            width: 343px;
+            font-size: 14px;
+        }
+
+        &__image {
+            display: none;
+
+            &-mobile {
+                display: block;
+                padding-top: 64px;
+                width: 100%;
+            }
+        }
+    }
 }
