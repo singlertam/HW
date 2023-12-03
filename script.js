@@ -1,167 +1,125 @@
+const seasonsGame = (userAnswer) => {
+    let answer = parseInt(prompt(userAnswer));
+
+    if (isNaN(answer) || answer < 1 || answer > 12) {
+        return "Вы ввели некорректное значение, попробуйте снова!";
+    } else if(answer === 12 || answer === 1 || answer === 2) {
+        return "Зима";
+    } else if(answer >= 3 && answer <= 5) {
+        return "Весна";
+    } else if(answer >= 6 && answer <= 8) {
+        return "Лето";
+    } else if(answer >= 9 && answer <= 11) {
+        return ("Осень");
+    } 
+};
+
 // Задание 1
 
-const numbers = [1, 5, 4, 10, 0, 3];
+let a = 'привет, мой дорогой друг!';
+console.log(a.toUpperCase());
 
-for (i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
-    if (numbers[i] === 10) break;
+// Задание 2 
+
+const presence = (array, str) => {
+    array.forEach(element => {
+        if(element.toLowerCase().startsWith(str.toLowerCase())) {
+            console.log(element);
+        }
+    });
 }
 
-// Задание 2
+presence(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
 
-const numbersTwo = [1, 5, 4, 10, 0, 3];
+// Задание 3 
 
-console.log(numbersTwo.indexOf(4));
-
-// Задание 3
-
-const numbersThree = [1, 3, 5, 10, 20];
-
-numbersThreeFiltered = numbersThree.join(' ');
-
-console.log(numbersThreeFiltered);
+let number = 32.58884;
+console.log(Math.floor(number), Math.ceil(number), Math.round(number));
 
 // Задание 4 
 
-const bigArray = [];
-const quantity = 3;
-
-for (i = 0; i < quantity; i++) {
-    const innerArray = [];
-    for (el = 0; el < quantity; el++) {
-        innerArray.push(1);
-    }
-    bigArray.push(innerArray);
-}
-
-console.log(bigArray);
+const numbers =  [52, 53, 49, 77, 21, 32];
+console.log(Math.min(...numbers), Math.max(...numbers));
 
 // Задание 5 
 
-const taskFive = [1, 1, 1];
-const addNumbers = 3;
-
-for (i = 0; i < addNumbers; i++) {
-    taskFive.push(2);
+const randomNumber = () => {
+    return Math.random() * 10;
 }
 
-console.log(taskFive);
+console.log(randomNumber());
 
-// Задание 6 
+// Задание 6
 
-const strangeArray = [9, 8, 7, 'a', 6, 5];
+const random = (int) => {
+    const arr = [];
+    for(i = 0; arr.length < Math.floor(int / 2); i++) {
+        arr.push(Math.floor(Math.random() * (int + 1)));
+    }
+    return arr;
+}
 
-newArray = strangeArray.sort().filter(item => typeof item === 'number');
-
-console.log(newArray);
+console.log(random(15));
 
 // Задание 7 
 
-// const guess = [9, 8, 7, 6, 5];
+const twoValues = (a, b) => {
+    let min = Math.ceil(a);
+    let max = Math.floor(b); 
 
-// const find = (userAnswer) => {
-//     let answer = prompt(userAnswer);
-//     let userNumber = parseInt(answer);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-//     if(guess.includes(userNumber)) {
-//         alert('Угадал');
-//     } else {
-//         alert('Не угадал')
-//     }
-// }
-
-// find('Угадайте число');
+console.log(twoValues(5, 12));
 
 // Задание 8
 
-let string = 'abcdef';
-let newString = string.split('').reverse().join('');
+console.log(new Date());
 
-console.log(newString);
+// Задание 9
 
-// Задание 9 
+let currentDate = new Date();
+let future = new Date(currentDate);
 
-const twoArray = [
-    [1, 2, 3],
-    [4, 5, 6]
-];
+future.setDate(currentDate.getDate() + 73);
 
-const newTwoArray = [].concat(...twoArray);
+console.log(future);
 
-console.log(newTwoArray);
+// Задние 10
 
+const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", 
+"Четверг", "Пятница", "Суббота"];
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 
-// Задание 10
+let myDate = new Date();
+let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] +
+" " + myDate.getFullYear() + " - это " + days[myDate.getDay()];
+let time = "Время: " + myDate.getHours() + ":" + myDate.getMinutes() +
+":" + myDate.getSeconds();
 
-const random = [7, 4, 9, 2, 5, 1, 8];
-
-for (i = 0; i < random.length - 1; i++) {
-    let count = random[i] + random[i + 1];
-    console.log(count);
-}
-
+console.log(fullDate);
+console.log(time);
 
 // Задание 11
 
-const square = [6, 4, 7, 2, 9, 8];
-let newSquare = square.map(item => item ** 2);
+const words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
-console.log(newSquare);
+const guess = () => {
+    let newWords = words.sort(() => Math.random() - 0.5);
+    alert(newWords);
 
-// Задание 12
-
-const words = ['слово', '', 'слог', 'длинное предложение', 'буква'];
-
-const checkLength = () => {
-    let count = words.map(item => item.length);
-    console.log(count);
-} 
-
-checkLength();
-
-// Задание 13
-
-const negative = [2, -3, 9, 4, -7, 5, -4, -1];
-
-const getNegative = () => {
-    let processed = negative.filter(item => item < 0);
-    console.log(processed);
-};
-
-getNegative();
-
-// Задание 14
-
-const randomValue = [];
-
-for (i = 0; i < 10; i++) {
-    let add = Math.random() * 10;
-    add = Math.floor(add);
-    randomValue.push(add);
+    let question1 = prompt('Чему равнялся первый элемент массива?');
+    let question2 = prompt('Чему равнялся последний элемент массива?');
+    if((question1.toLowerCase() === words[0].toLowerCase())
+        && (question2.toLowerCase() === words[words.length - 1].toLowerCase()))
+    {
+        alert("Congratulations!!!")
+    } else if((question1.toLowerCase() === words[0].toLowerCase()) 
+        || (question2.toLowerCase() === words[words.length - 1].toLowerCase()))
+    {
+        alert("Вы были близки к победе!");
+    } else {
+        alert("К сожалению, вы ответили неправильно!");
+    }
 }
-
-console.log(randomValue);
-
-let newRandomValue = randomValue.filter(item => item % 2 === 0);
-
-console.log(newRandomValue);
-
-// Задание 15 
-
-const average = [];
-
-for (i = 0; i < 6; i++) {
-    let add = Math.floor(Math.random() * 10);
-    average.push(add);
-}
-
-let processed = average.reduce(getAverage = (sum, initial) => {
-    return sum + initial;
-});
-
-console.log(average);
-console.log(processed);
-
-newAverage = processed / average.length;
-
-console.log(newAverage);
