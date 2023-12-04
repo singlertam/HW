@@ -37,16 +37,16 @@ const guess = () => {
 
 // Задание 1
 
-// const people = [
-//     { name: 'Глеб', age: 29 },
-//     { name: 'Анна', age: 17 },
-//     { name: 'Олег', age: 7 },
-//     { name: 'Оксана', age: 47 }
-// ];
+const firstPeople = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
 
-// people.sort((p1, p2) => p1.age - p2.age);
+firstPeople.sort((p1, p2) => p1.age - p2.age);
 
-// console.log(people);
+console.log(firstPeople);
 
 // Задание 2  
 
