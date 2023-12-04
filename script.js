@@ -14,95 +14,6 @@ const seasonsGame = (userAnswer) => {
     } 
 };
 
-// Задание 1
-
-let a = 'привет, мой дорогой друг!';
-console.log(a.toUpperCase());
-
-// Задание 2 
-
-const presence = (array, str) => {
-    array.forEach(element => {
-        if(element.toLowerCase().startsWith(str.toLowerCase())) {
-            console.log(element);
-        }
-    });
-}
-
-presence(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
-
-// Задание 3 
-
-let number = 32.58884;
-console.log(Math.floor(number), Math.ceil(number), Math.round(number));
-
-// Задание 4 
-
-const numbers =  [52, 53, 49, 77, 21, 32];
-console.log(Math.min(...numbers), Math.max(...numbers));
-
-// Задание 5 
-
-const randomNumber = () => {
-    return Math.random() * 10;
-}
-
-console.log(randomNumber());
-
-// Задание 6
-
-const random = (int) => {
-    const arr = [];
-    for(i = 0; arr.length < Math.floor(int / 2); i++) {
-        arr.push(Math.floor(Math.random() * (int + 1)));
-    }
-    return arr;
-}
-
-console.log(random(15));
-
-// Задание 7 
-
-const twoValues = (a, b) => {
-    let min = Math.ceil(a);
-    let max = Math.floor(b); 
-
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-console.log(twoValues(5, 12));
-
-// Задание 8
-
-console.log(new Date());
-
-// Задание 9
-
-let currentDate = new Date();
-let future = new Date(currentDate);
-
-future.setDate(currentDate.getDate() + 73);
-
-console.log(future);
-
-// Задние 10
-
-const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", 
-"Четверг", "Пятница", "Суббота"];
-const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-
-let myDate = new Date();
-let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] +
-" " + myDate.getFullYear() + " - это " + days[myDate.getDay()];
-let time = "Время: " + myDate.getHours() + ":" + myDate.getMinutes() +
-":" + myDate.getSeconds();
-
-console.log(fullDate);
-console.log(time);
-
-// Задание 11
-
 const words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
 const guess = () => {
@@ -123,3 +34,91 @@ const guess = () => {
         alert("К сожалению, вы ответили неправильно!");
     }
 }
+
+// Задание 1
+
+// const people = [
+//     { name: 'Глеб', age: 29 },
+//     { name: 'Анна', age: 17 },
+//     { name: 'Олег', age: 7 },
+//     { name: 'Оксана', age: 47 }
+// ];
+
+// people.sort((p1, p2) => p1.age - p2.age);
+
+// console.log(people);
+
+// Задание 2  
+
+// function isPositive(num) {
+//     return num > 0;
+// };
+
+// function isMale(person) {
+//     return person.gender === 'male';
+// };
+
+// function filter(people, ruleFunction) {
+//     const processed = [];
+  
+//     for (i = 0; i < people.length; i++) {
+//         if (ruleFunction(people[i])) {
+//             processed.push(people[i]);
+//         }
+//     }
+
+//     return processed;
+// };
+
+// console.log(filter([3, -4, 1, 9], isPositive));
+
+// const people = [
+//     {name: 'Глеб', gender: 'male'},
+//     {name: 'Анна', gender: 'female'},
+//     {name: 'Олег', gender: 'male'},
+//     {name: 'Оксана', gender: 'female'}
+// ];
+
+// console.log(filter(people, isMale));
+
+// Задание 3
+
+// const showTime = () => {
+//     let timerId = setInterval(() => {
+//         const currentTime = new Date();
+//         console.log(currentTime);
+//     }, 1000 * 3);
+
+//     setTimeout(() => {
+//         clearInterval(timerId);
+//         console.log('30 секунд прошло');
+//     }, 1000 * 30)
+// }
+
+// showTime();
+
+// Задание 4
+
+// function delayForSecond(callback) {
+//     setTimeout(callback, 1000);
+// }
+
+// delayForSecond(function () {
+//     console.log('Привет, Глеб!');
+// });
+
+// Задание 5
+
+// function delayForSecond(cb) {
+//     setTimeout(() => {
+//         console.log('Прошла одна секунда');
+// 			if(cb) { 	cb(); }
+//     }, 1000)
+// }
+
+// function sayHi (name) {
+//     console.log(`Привет, ${name}!`);
+// }
+
+// delayForSecond(() => sayHi('Глеб'));
+
