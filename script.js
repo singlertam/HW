@@ -1,110 +1,124 @@
+const seasonsGame = (userAnswer) => {
+    let answer = parseInt(prompt(userAnswer));
+
+    if (isNaN(answer) || answer < 1 || answer > 12) {
+        return "Вы ввели некорректное значение, попробуйте снова!";
+    } else if(answer === 12 || answer === 1 || answer === 2) {
+        return "Зима";
+    } else if(answer >= 3 && answer <= 5) {
+        return "Весна";
+    } else if(answer >= 6 && answer <= 8) {
+        return "Лето";
+    } else if(answer >= 9 && answer <= 11) {
+        return ("Осень");
+    } 
+};
+
+const words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+const guess = () => {
+    let newWords = words.sort(() => Math.random() - 0.5);
+    alert(newWords);
+
+    let question1 = prompt('Чему равнялся первый элемент массива?');
+    let question2 = prompt('Чему равнялся последний элемент массива?');
+    if((question1.toLowerCase() === words[0].toLowerCase())
+        && (question2.toLowerCase() === words[words.length - 1].toLowerCase()))
+    {
+        alert("Congratulations!!!")
+    } else if((question1.toLowerCase() === words[0].toLowerCase()) 
+        || (question2.toLowerCase() === words[words.length - 1].toLowerCase()))
+    {
+        alert("Вы были близки к победе!");
+    } else {
+        alert("К сожалению, вы ответили неправильно!");
+    }
+}
+
 // Задание 1
 
-// let password = 'world';
-// let request = prompt('Введите пароль');
+const firstPeople = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
 
-// // if (password === request) {
-// //     alert('Пароль введен верно');
-// // } else {
-// //     alert('Пароль введен неверно');
-// // }
+firstPeople.sort((p1, p2) => p1.age - p2.age);
 
-// (password === request) ? alert('Пароль введен верно') : alert('Пароль введен неверно');
+console.log(firstPeople);
 
-// // Задание 2 
+// Задание 2  
 
-// let c = 11;
+function isPositive(num) {
+    return num > 0;
+};
 
-// if (c > 0 && c < 10) {
-//     console.log('Верно');
-// } else {
-//     console.log('Неверно');
-// }
+function isMale(person) {
+    return person.gender === 'male';
+};
 
-// // Задание 3 
+function filter(people, ruleFunction) {
+    const processed = [];
+  
+    for (i = 0; i < people.length; i++) {
+        if (ruleFunction(people[i])) {
+            processed.push(people[i]);
+        }
+    }
 
-// let d = 5;
-// let e = 3;
+    return processed;
+};
 
-// if (d > 100 || e > 100) {
-//     console.log('Верно');
-// } else {
-//     console.log('Неверно');
-// }
+console.log(filter([3, -4, 1, 9], isPositive));
 
-// // Задание 4 
+const people = [
+    {name: 'Глеб', gender: 'male'},
+    {name: 'Анна', gender: 'female'},
+    {name: 'Олег', gender: 'male'},
+    {name: 'Оксана', gender: 'female'}
+];
 
-// let a = '2';
-// let b = '3';
-// // Код выше изменять менять нельзя, чтобы решить задачу исправьте код ниже: 
-// alert(parseInt(a) + parseInt(b));
+console.log(filter(people, isMale));
 
-// // Задание 5 
+// Задание 3
 
-// let monthNumber = 13;
+const showTime = () => {
+    let timerId = setInterval(() => {
+        const currentTime = new Date();
+        console.log(currentTime);
+    }, 1000 * 3);
 
-// switch (monthNumber) {
-//     case 1:
-//     case 2:
-//     case 12:
-//         console.log('Зима');
-//         break;
-//     case 3:
-//     case 4:
-//     case 5:
-//         console.log('Весна');
-//         break;
-//     case 6:
-//     case 7:
-//     case 8:
-//         console.log('Лето');
-//         break;
-//     case 9:
-//     case 10:
-//     case 11:
-//         console.log('Осень');
-//         break;
-//     default:
-//         сonsole.log('Такого месяца не существует')
-// }
+    setTimeout(() => {
+        clearInterval(timerId);
+        console.log('30 секунд прошло');
+    }, 1000 * 30)
+}
 
-// Задание 6
+showTime();
 
-// let evenOrNot = prompt('Пожалуйста, введите любое число');
+// Задание 4
 
-// let userNumber = parseFloat(evenOrNot);
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+}
 
-// if (!isNaN(userNumber)) {
-//     if (userNumber % 2 === 0) {
-//         alert("Число четное");
-//     } else {
-//         alert("Число нечетное");
-//     }
-// } else {
-//     alert("Вы ввели некорректное значение. Пожалуйста, введите число.");
-// }
+delayForSecond(function () {
+    console.log('Привет, Глеб!');
+});
 
-// Задание 7 
+// Задание 5
 
-// let clientOs = 0;
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+			if(cb) { 	cb(); }
+    }, 1000)
+}
 
-// if (clientOs === 0) {
-//     console.log('Установите версию приложения для iOS по ссылке');
-// } else if (clientOs === 1) {
-//     console.log('Установите версию приложения для Android по ссылке');
-// } else {
-//     console.log('Неизвестная операционная система');
-// }
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
 
-// Задание 8 
+delayForSecond(() => sayHi('Глеб'));
 
-// let clientOs = 0;
-// let clientDeviceYear = 2015;
-
-// if (clientDeviceYear < 2015 && clientOs === 0) {
-//     console.log('Установите облегченную версию приложения для iOS по ссылке');
-// } else if (clientDeviceYear < 2015 && clientOs === 1) {
-//     console.log('Установите облегченную версию приложения для Android по ссылке');
-// } else {
-//     console.log('У вас актуальная операционная система');
-// }
