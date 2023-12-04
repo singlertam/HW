@@ -50,75 +50,75 @@ const guess = () => {
 
 // Задание 2  
 
-// function isPositive(num) {
-//     return num > 0;
-// };
+function isPositive(num) {
+    return num > 0;
+};
 
-// function isMale(person) {
-//     return person.gender === 'male';
-// };
+function isMale(person) {
+    return person.gender === 'male';
+};
 
-// function filter(people, ruleFunction) {
-//     const processed = [];
+function filter(people, ruleFunction) {
+    const processed = [];
   
-//     for (i = 0; i < people.length; i++) {
-//         if (ruleFunction(people[i])) {
-//             processed.push(people[i]);
-//         }
-//     }
+    for (i = 0; i < people.length; i++) {
+        if (ruleFunction(people[i])) {
+            processed.push(people[i]);
+        }
+    }
 
-//     return processed;
-// };
+    return processed;
+};
 
-// console.log(filter([3, -4, 1, 9], isPositive));
+console.log(filter([3, -4, 1, 9], isPositive));
 
-// const people = [
-//     {name: 'Глеб', gender: 'male'},
-//     {name: 'Анна', gender: 'female'},
-//     {name: 'Олег', gender: 'male'},
-//     {name: 'Оксана', gender: 'female'}
-// ];
+const people = [
+    {name: 'Глеб', gender: 'male'},
+    {name: 'Анна', gender: 'female'},
+    {name: 'Олег', gender: 'male'},
+    {name: 'Оксана', gender: 'female'}
+];
 
-// console.log(filter(people, isMale));
+console.log(filter(people, isMale));
 
 // Задание 3
 
-// const showTime = () => {
-//     let timerId = setInterval(() => {
-//         const currentTime = new Date();
-//         console.log(currentTime);
-//     }, 1000 * 3);
+const showTime = () => {
+    let timerId = setInterval(() => {
+        const currentTime = new Date();
+        console.log(currentTime);
+    }, 1000 * 3);
 
-//     setTimeout(() => {
-//         clearInterval(timerId);
-//         console.log('30 секунд прошло');
-//     }, 1000 * 30)
-// }
+    setTimeout(() => {
+        clearInterval(timerId);
+        console.log('30 секунд прошло');
+    }, 1000 * 30)
+}
 
-// showTime();
+showTime();
 
 // Задание 4
 
-// function delayForSecond(callback) {
-//     setTimeout(callback, 1000);
-// }
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+}
 
-// delayForSecond(function () {
-//     console.log('Привет, Глеб!');
-// });
+delayForSecond(function () {
+    console.log('Привет, Глеб!');
+});
 
 // Задание 5
 
-// function delayForSecond(cb) {
-//     setTimeout(() => {
-//         console.log('Прошла одна секунда');
-// 			if(cb) { 	cb(); }
-//     }, 1000)
-// }
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+			if(cb) { 	cb(); }
+    }, 1000)
+}
 
-// function sayHi (name) {
-//     console.log(`Привет, ${name}!`);
-// }
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
 
-// delayForSecond(() => sayHi('Глеб'));
+delayForSecond(() => sayHi('Глеб'));
 
